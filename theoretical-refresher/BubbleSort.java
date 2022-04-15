@@ -7,43 +7,39 @@ public class BubbleSort {
     private final String algoStability = "Unstable, ie. does not maintain order of duplicate items";
 
     // Outputs the step wise working
-    public void bubbleSort(int[] nums, boolean elaborate) {
-        int temp;
+    public void bubbleSort(int[] intArray, boolean elaborate) {
         long startTime = System.currentTimeMillis();
-        for (int j = 0; j < nums.length; j++) { //to perform the inner loop n times
-            for (int k = 0; k < nums.length - 1; k++) { // perform the comparisons
-                System.out.print("Element " + k + " <" + nums[k] + "> is compared to Element " + (k + 1) + " <" + nums[k + 1] + ">");
-                if (nums[k] > nums[k + 1]) {
+        int temp;
+        for (int j = 0; j < intArray.length; j++) { //to perform the inner loop n times
+            for (int k = 0; k < intArray.length - 1; k++) { // perform the comparisons
+                System.out.print("Element " + k + " <" + intArray[k] + "> is compared to Element " + (k + 1) + " <" + intArray[k + 1] + ">");
+                if (intArray[k] > intArray[k + 1]) {
                     System.out.println("; swapping performed.");
-                    temp = nums[k];
-                    nums[k] = nums[k + 1];
-                    nums[k + 1] = temp;
+                    Sorting.swap(intArray, k, k+1);
                 } else {
                     System.out.println("; no swapping performed.");
                 }
-                System.out.println("Iteration " + (j + 1) + "." + (k + 1) + " Result : " + Arrays.toString(nums));
+                System.out.println("Iteration " + (j + 1) + "." + (k + 1) + " Result : " + Arrays.toString(intArray));
             }
         }
         long endTime = System.currentTimeMillis();
         long duration = endTime - startTime;
-        Sorting.analysisSummary(nums, this.sortAlgo, this.timeComp, this.algoType, this.algoStability, duration);
+        Sorting.analysisSummary(intArray, this.sortAlgo, this.timeComp, this.algoType, this.algoStability, duration);
     }
 
     // Overrides bubblesort method to prevent console print for step wise working
-    public void bubbleSort(int[] nums) {
-        int temp;
+    public void bubbleSort(int[] intArray) {
         long startTime = System.currentTimeMillis();
-        for (int j = 0; j < nums.length; j++) {
-            for (int k = 0; k < nums.length - 1; k++) {
-                if (nums[k] > nums[k + 1]) {
-                    temp = nums[k];
-                    nums[k] = nums[k + 1];
-                    nums[k + 1] = temp;
+        int temp;
+        for (int j = 0; j < intArray.length; j++) {
+            for (int k = 0; k < intArray.length - 1; k++) {
+                if (intArray[k] > intArray[k + 1]) {
+                    Sorting.swap(intArray, k, k+1);
                 }
             }
         }
         long endTime = System.currentTimeMillis();
         long duration = endTime - startTime;
-        Sorting.analysisSummary(nums, this.sortAlgo, this.timeComp, this.algoType, this.algoStability, duration);
+        Sorting.analysisSummary(intArray, this.sortAlgo, this.timeComp, this.algoType, this.algoStability, duration);
     }
 }
