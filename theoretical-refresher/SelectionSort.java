@@ -12,7 +12,7 @@ public class SelectionSort {
         for (int lastUnsorted = intArray.length - 1; lastUnsorted > 0; lastUnsorted--) { //to perform the inner loop n times
             largest = 0;
             for (int sorted = 1; sorted <= lastUnsorted; sorted++) {// perform the comparisons
-                System.out.print("int largest " + largest + " <" + intArray[largest] + "> is compared to Element " + (sorted) + " <" + intArray[sorted] + ">");
+                System.out.print("'Largest' value " + largest + " <" + intArray[largest] + "> is compared to Element " + (sorted) + " <" + intArray[sorted] + ">");
                 if (intArray[largest] < intArray[sorted]) {
                     largest = sorted;
                     System.out.println("; index largest re-defined.");
