@@ -1,7 +1,7 @@
 
 /**
  * A deep dive into various sorting methods in Java.
- * @author   Sonali Basu
+ * @author  Sonali Basu
  */
 
 import java.util.Arrays;
@@ -73,7 +73,7 @@ public class Sorting {
             System.out.println("Do you want to view the step-by-step progression? [Y/N]");
             String analysis = sc.nextLine();
             System.out.println(
-                    "Enter the number corresponding to the sort algorithm you would like to implement:\n(1) Bubble Sort\n(2) Selection Sort\n(Any Other Key) Exit");
+                    "Enter the number corresponding to the sort algorithm you would like to implement:\n(1) Bubble Sort\n(2) Selection Sort\n(3) Insertion Sort\n(Any Other Key) Exit");
             // sc.nextLine();
             String choice = sc.nextLine();
             boolean elaborate;
@@ -97,6 +97,14 @@ public class Sorting {
                         case2.selectionSort(nums, true);
                     } else {
                         case2.selectionSort(nums);
+                    }
+                    break;
+                case "3":
+                    InsertionSort case3 = new InsertionSort();
+                    if (elaborate) {
+                        case3.insertionSort(nums, true);
+                    } else {
+                        case3.insertionSort(nums);
                     }
                     break;
                 default:
