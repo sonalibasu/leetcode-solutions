@@ -35,6 +35,7 @@ public class InsertionSort {
                     Sorting.swap(intArray, sortedCursor, sortedCursor+1);
                 } else {
                     System.out.println("; no move performed.");
+                    break;
                 }
             }
         }
