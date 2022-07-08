@@ -1,7 +1,5 @@
 import java.util.Arrays;
 
-import javax.swing.plaf.metal.MetalBorders.ScrollPaneBorder;
-
 public class InsertionSort {
     private final String sortAlgo = "Insertion Sort";
     private final String timeComp = "O(n^2), Quadratic";
