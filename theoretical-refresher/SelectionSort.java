@@ -5,7 +5,16 @@ public class SelectionSort {
     private final String timeComp = "O(n^2), Quadratic";
     private final String algoType = "In Place, ie. no data/array duplication required";
     private final String algoStability = "Unstable, ie. does not maintain order of duplicate items";
-
+    /**
+     * Selection sort uses the concept of a 'largest' element and divides the array into
+     * 'sorted' and 'unsorted' sections. 'largest' value is set as first item of unsorted section for each iteration.
+     * Compared to next element, if largest < next, values are swapped to maintain the largest status.
+     * Continued till end of array. Repeated n times. 
+     * 
+     * @param intArray  array in which elements are to be swapped
+     * @param elaborate boolean specifying if elaboration is to be displayed on console
+     * @return no value
+     */
     public void selectionSort(int[] intArray, boolean elaborate) {
         long startTime = System.currentTimeMillis();
         int largest;
@@ -21,8 +30,8 @@ public class SelectionSort {
                 }
             }
             // Swapping values
+            System.out.print("int largest @index" + largest + " <val:" + intArray[largest] + "> is swapped to top of unSorted partition @index" + (lastUnsorted) + ", previously containing value <val:" + intArray[lastUnsorted] + ">\n");
             Sorting.swap(intArray, largest, lastUnsorted);
-            System.out.print("int largest " + largest + " <" + intArray[largest] + "> is swapped to top of unSorted partition " + (lastUnsorted) + ", previously containing value <" + intArray[lastUnsorted] + ">");
         }
         System.out.println("\n\nOutput Array: " + Arrays.toString(intArray));
         long endTime = System.currentTimeMillis();

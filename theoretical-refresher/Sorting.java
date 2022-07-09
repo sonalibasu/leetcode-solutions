@@ -1,7 +1,7 @@
 
 /**
  * A deep dive into various sorting methods in Java.
- * @author   Sonali Basu
+ * @author  Sonali Basu
  */
 
 import java.util.Arrays;
@@ -14,10 +14,10 @@ public class Sorting {
      *
      * @param sortedArray   sorted input array
      * @param sortAlgo      algorithm used to sort the array
-     * @param timeComp      algorithm used to sort the array
-     * @param algoType      algorithm used to sort the array
-     * @param algoStability algorithm used to sort the array
-     * @param duration      algorithm used to sort the array
+     * @param timeComp      time complexity of the algorithm
+     * @param algoType      if the algorithm is in place or requires duplication
+     * @param algoStability if algorithm maintains order of duplicate items
+     * @param duration      time taken by algorithm
      * @return no value
      */
     public static final void analysisSummary(int[] sortedArray, String sortAlgo, String timeComp, String algoType,
@@ -73,7 +73,7 @@ public class Sorting {
             System.out.println("Do you want to view the step-by-step progression? [Y/N]");
             String analysis = sc.nextLine();
             System.out.println(
-                    "Enter the number corresponding to the sort algorithm you would like to implement:\n(1) Bubble Sort\n(2) Selection Sort\n(Any Other Key) Exit");
+                    "Enter the number corresponding to the sort algorithm you would like to implement:\n(1) Bubble Sort\n(2) Selection Sort\n(3) Insertion Sort\n(4) Shell Sort\n(Any Other Key) Exit");
             // sc.nextLine();
             String choice = sc.nextLine();
             boolean elaborate;
@@ -97,6 +97,22 @@ public class Sorting {
                         case2.selectionSort(nums, true);
                     } else {
                         case2.selectionSort(nums);
+                    }
+                    break;
+                case "3":
+                    InsertionSort case3 = new InsertionSort();
+                    if (elaborate) {
+                        case3.insertionSort(nums, true);
+                    } else {
+                        case3.insertionSort(nums);
+                    }
+                    break;
+                case "4":
+                    ShellSort case4 = new ShellSort();
+                    if (elaborate) {
+                        case4.shellSort(nums, true);
+                    } else {
+                        case4.shellSort(nums);
                     }
                     break;
                 default:

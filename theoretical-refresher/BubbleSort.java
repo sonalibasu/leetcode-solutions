@@ -10,7 +10,7 @@ public class BubbleSort {
     public void bubbleSort(int[] intArray, boolean elaborate) {
         long startTime = System.currentTimeMillis();
         int temp;
-        for (int j = 0; j < intArray.length; j++) { //to perform the inner loop n times
+        for (int j = 0; j < intArray.length; j++) { //to iterate the list n times
             for (int k = 0; k < intArray.length - 1; k++) { // perform the comparisons
                 System.out.print("Element " + k + " <" + intArray[k] + "> is compared to Element " + (k + 1) + " <" + intArray[k + 1] + ">");
                 if (intArray[k] > intArray[k + 1]) {
