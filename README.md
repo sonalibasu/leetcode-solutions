@@ -1,2 +1,3 @@
 # leetcode-solutions
-Deep Dive into Data Structures &amp; Algorithms in Java
+Maintaining a repo of all my LeetCode solutions !
+Languages - Python & Java
