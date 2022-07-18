@@ -3,8 +3,7 @@ https://leetcode.com/problems/contains-duplicate/
 
 Complexity Analysis
 
-Time Complexity: O(N), where NN is the length of nums.
-Space Complexity: O(1), the space used by leftsum and S.
+Time Complexity: O(N), where N is the length of nums.
 """
 class Solution(object):
     def containsDuplicate(self, nums):
