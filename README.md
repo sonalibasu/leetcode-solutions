@@ -1,8 +1,5 @@
 # leetcode-solutions
-Maintaining a repo of all my LeetCode solutions in Python & Java.
-
-## python3
-Leetcode problem solutions in python3 + their time and space complexities.
+Maintaining a repo of all my LeetCode solutions in Java.
 
 ## java
 Leetcode problem solutions in java + their time and space complexities.
