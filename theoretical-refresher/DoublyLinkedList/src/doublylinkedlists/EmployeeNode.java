@@ -1,24 +1,25 @@
+package doublylinkedlists;
+
 public class EmployeeNode {
     private Employee employee;
+    // not setting to null as that's the default for objects
     private EmployeeNode next;
+    private EmployeeNode previous;
 
-    @Override
-    public String toString() {
-        return "{" +
-            " employee='" + getEmployee() + "'" +
-            ", next='" + getNext() + "'" +
-            "}";
+    public EmployeeNode getPrevious() {
+        return previous;
     }
 
+    public void setPrevious(EmployeeNode previous) {
+        this.previous = previous;
+    }
 
-    // constructing an instance we only take the value. As we don't know what the next node will be
-    // default for object fields is null, which is why we don't need to explicitly set that.
     public EmployeeNode(Employee employee){
         this.employee = employee;
     }
 
     public Employee getEmployee() {
-        return this.employee;
+        return employee;
     }
 
     public void setEmployee(Employee employee) {
@@ -26,12 +27,14 @@ public class EmployeeNode {
     }
 
     public EmployeeNode getNext() {
-        return this.next;
+        return next;
     }
 
     public void setNext(EmployeeNode next) {
         this.next = next;
     }
-
+    @Override
+    public String toString() {
+        return employee.toString();
+    }
 }
-
